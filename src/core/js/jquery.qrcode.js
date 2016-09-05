@@ -89,7 +89,7 @@
       if(settings.mBlank === 0) {
         qr.addBlank(0, st - pad, size, sb + pad);
       } else {
-        context.fillStyle = settings.background;
+        context.fillStyle = settings.mBackground ? settings.mBackground : settings.background;
         context.fillRect(0, (st - pad) * size, size, (sh + 2 * pad) * size);
       }
     } else {
@@ -97,7 +97,7 @@
       if(settings.mBlank === 0) {
         qr.addBlank(sl - pad, st - pad, sr + pad, sb + pad);
       } else {
-        context.fillStyle = settings.background;
+        context.fillStyle = settings.mBackground ? settings.mBackground : settings.background;
         context.fillRect((sl - pad) * size, (st - pad) * size, (sw + 2 * pad) * size, (sh + 2 * pad) * size);
       }
     }
@@ -127,7 +127,7 @@
       if(settings.mBlank === 0) {
         qr.addBlank(0, st - pad, size, sb + pad);
       } else {
-        context.fillStyle = settings.background;
+        context.fillStyle = settings.mBackground ? settings.mBackground : settings.background;
         context.fillRect(0, (st - pad) * size, size, (sh + 2 * pad) * size);
       }
     } else {
@@ -135,7 +135,7 @@
       if(settings.mBlank === 0) {
         qr.addBlank(sl - pad, st - pad, sr + pad, sb + pad);
       } else {
-        context.fillStyle = settings.background;
+        context.fillStyle = settings.mBackground ? settings.mBackground : settings.background;
         context.fillRect((sl - pad) * size, (st - pad) * size, (sw + 2 * pad) * size, (sh + 2 * pad) * size);
       }
     }
@@ -454,6 +454,7 @@
     mPosY: 0.5,
     mRadius: 0,
     mBlank: 0,
+    mBackground: null,
 
     label: 'no label',
     fontname: 'sans',

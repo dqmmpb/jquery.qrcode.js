@@ -44,6 +44,7 @@ $(function() {
       mPad: parseInt($('#mpad').val(), 10) * 0.01,
       mRadius: parseInt($('#mradius').val(), 10) * 0.01,
       mBlank: parseInt($('#mblank').val(), 10),
+      mBackground: $('#mbackground').val(),
 
       label: $('#label').val(),
       fontname: $('#font').val(),
